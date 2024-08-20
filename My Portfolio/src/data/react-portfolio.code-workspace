@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"name": "Ecommerce",
+			"path": "../../../../ecommercee/Ecommerce"
+		}
+	],
+	"settings": {}
+}

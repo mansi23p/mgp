@@ -1,0 +1,177 @@
+@import "../../vars.css";
+
+/* General Button Styles */
+button {
+  padding: 10px 20px;
+  font-size: 22px;
+  background-color: #050607; /* Default background color */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 9px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: relative; /* Needed for pseudo-element positioning */
+  overflow: hidden; /* Hide overflow for border animation */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-color: #7f0907; /* Change background color */
+  background: linear-gradient(to right, rgb(33, 15, 15), rgb(90, 35, 24));
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+/* Button Click Effect */
+button:active {
+  transform: scale(0.95); /* Slightly shrink the button */
+}
+
+/* Animated Border for Buttons */
+button:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent; /* Default border */
+  border-radius: 9px;
+  transition: border-color 0.3s ease;
+  z-index: 0;
+}
+
+/* Show border on hover */
+button:hover:before {
+  border-color: #e5dede; /* Change border color on hover */
+  transform: scale(1.1); /* Slightly enlarge border */
+}
+
+/* Button Text Layering */
+button span {
+  position: relative;
+  z-index: 1; /* Ensure text is above the border */
+}
+
+/* Specific Button Styles */
+.about-btn {
+  background-color: #000001; /* Blue background */
+}
+
+.experience-btn {
+  background-color: #030607; /* Red background */
+}
+
+.projects-btn {
+  background-color: #0f0e0e; /* Orange background */
+}
+
+.contact-btn {
+  background-color: #5e0808; /* Purple background */
+}
+/* Navbar Styles */
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 61px;
+  z-index: 2;
+  margin: 0 10%;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Title Styles */
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Menu Button Styles */
+.menuBtn {
+  display: none;
+  cursor: pointer;
+  font-size: 24px; /* Adjust size as needed */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Menu Styles */
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+/* Menu Hover Effect */
+.menuItems a:hover {
+  color: #07080a; /* Change color on hover */
+}
+
+/* Responsive Menu Styles */
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+    transition: transform 0.3s ease; /* Smooth transition for menu */
+  }
+
+  .menuBtn {
+    display: block;
+    font-size: 24px;
+    color: var(--color-text);
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+    border-radius: 10px;
+    background: rgb(83, 5, 5);
+    background: linear-gradient(
+      0deg,
+      rgba(25, 55, 109, 0.2) 0%,
+      rgb(118, 6, 6) 100%
+    );
+    padding: 24px 33px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transitions for menu visibility */
+  }
+
+  .menuOpen {
+    display: flex;
+    opacity: 1; /* Ensure visibility */
+    transform: translateX(0); /* Reset position */
+  }
+
+  .menuClosed {
+    opacity: 0; /* Hide the menu */
+    transform: translateX(20px); /* Slide menu out */
+  }
+}
+/* Navbar.module.css */
+

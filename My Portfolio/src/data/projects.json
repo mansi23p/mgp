@@ -1,0 +1,27 @@
+[
+  {
+    "title": "Church App",
+    "imageSrc": "projects/project.png",
+    "description": "This is a real time project made by using MERN Stack technology.",
+    "skills": ["MongoDB", "Express.js", "React.js", "Node.js"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  
+  {
+    "title": "Ticket Nest App",
+    "imageSrc": "projects/project.png",
+    "description": "This is a working type project made by using MERN Stack technology..",
+    "skills": ["MongoDB", "Express.js", "React.js", "Node.js"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  },
+  {
+    "title": "Vidarbh Spices",
+    "imageSrc": "projects/project.png",
+    "description": "This is a project made to learn front end develpement.",
+    "skills": ["HTML5", "CSS", "Tailwind" ,"Javascript"],
+    "demo": "https://www.example.com",
+    "source": "https://www.github.com"
+  }
+]

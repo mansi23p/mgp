@@ -1,0 +1,304 @@
+@import "../../vars.css";
+
+/* Container Styles */
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 49px;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  background-color: black; /* Set background color to black */
+  color: white; /* Set text color to white */
+  padding: 40px; /* Add padding to contain content */
+  border-radius: 15px; /* Optional: Rounded corners for a softer look */
+}
+
+/* Content Styles */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--color-text); /* Ensure text color is white */
+  z-index: 1;
+}
+
+/* Title Styles */
+.title {
+  font-size: 72px;
+  font-weight: 900;
+  margin-bottom: 33px;
+  font-family: var(--font-roboto);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 70%,
+    rgba(255, 255, 255, 0) 120%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: float 1s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Description Styles */
+.description {
+  font-size: 30px;
+  font-family: var(--font-roboto);
+  margin-bottom: 52px;
+  animation: float 1s ease-in-out infinite; /* Apply floating animation */
+}
+
+/* Contact Button Styles */
+.contactBtn {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: white; /* Ensure text color is white */
+  background: linear-gradient(to right, rgb(50, 17, 17), rgb(23, 17, 5));
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  background-color: rgb(9, 9, 27);
+  background-color: ;
+  transition: background-color 0.1s ease;
+}
+
+/* Button Hover Effect */
+.contactBtn:hover {
+  background-color: #4d0808; /* Adjust to fit your theme */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Blur Effects */
+.topBlur {
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  min-width: 350px;
+  top: -128px;
+  left: -10vw;
+  border-radius: 764px;
+  background: rgba(25, 55, 109, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+.bottomBlur {
+  position: absolute;
+  width: 70vw;
+  height: 50vw;
+  min-width: 250px;
+  top: 246px;
+  right: -25vw;
+  border-radius: 764px;
+  background: rgba(16, 13, 52, 0.7);
+  filter: blur(100px);
+  z-index: 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 830px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .content {
+    align-items: center;
+  }
+}
+/* Image Styles */
+.roundImage {
+  width: 500px; /* Set the width of the image */
+  height: 500px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image round */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Default shadow effect */
+  transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition effects */
+  animation: float 3s ease-in-out infinite; /* Apply floating animation */
+  position: relative; /* Needed for the pseudo-element positioning */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px); /* Float up */
+  }
+  100% {
+    transform: translateY(0); /* Float back to the original position */
+  }
+}
+
+/* Hover Effect */
+.roundImage:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Optional: Border Animation (if you want a border instead of shadow) */
+/* Image Styles */
+.roundImage {
+  width: 500px; /* Set the width of the image */
+  height: 500px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image round */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Default shadow effect */
+  transition: box-shadow 0.1s ease, transform 0.1s ease, border-color 0.1s ease; /* Fast transitions */
+  animation: float 1.5s ease-in-out infinite; /* Faster floating animation */
+  position: relative; /* Needed for the pseudo-element positioning */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Float up more pronounced */
+  }
+  100% {
+    transform: translateY(0); /* Float back to the original position */
+  }
+}
+
+/* Hover Effect */
+.roundImage:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Optional: Border Animation (if you want a border instead of shadow) */
+/* Image Styles */
+.roundImage {
+  width: 500px; /* Set the width of the image */
+  height: 500px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image round */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Default shadow effect */
+  transition: box-shadow 0.1s ease, transform 0.1s ease, border-color 0.1s ease; /* Fast transitions */
+  animation: float 1.5s ease-in-out infinite; /* Faster floating animation */
+  position: relative; /* Needed for the pseudo-element positioning */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Float up more pronounced */
+  }
+  100% {
+    transform: translateY(0); /* Float back to the original position */
+  }
+}
+
+/* Hover Effect */
+.roundImage:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Optional: Border Animation (if you want a border instead of shadow) */
+.roundImage:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid rgba(255, 255, 255, 0.7); /* Default border color */
+  border-radius: 50%;
+  transition: border-color 0.1s ease; /* Fast transition for border color */
+  z-index: -1;
+}
+
+/* Hover Effect on Border */
+.roundImage:hover:before {
+  border-color: rgba(255, 255, 255, 1); /* Change border color on hover */
+}
+/* Image Styles */
+.roundImage {
+  width: 500px; /* Set the width of the image */
+  height: 500px; /* Set the height of the image */
+  border-radius: 50%; /* Make the image round */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Default shadow effect */
+  transition: box-shadow 0.1s ease, transform 0.1s ease, border-color 0.3s ease; /* Fast transitions */
+  animation: float 1.5s ease-in-out infinite; /* Floating animation */
+  position: relative; /* Needed for the pseudo-element positioning */
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px); /* Float up more pronounced */
+  }
+  100% {
+    transform: translateY(0); /* Float back to the original position */
+  }
+}
+
+/* Hover Effect */
+.roundImage:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Border Animation */
+.roundImage:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid transparent; /* Default border color */
+  border-radius: 50%; /* Circular border */
+  transition: border-color 0.3s ease; /* Smooth transition for border color */
+  z-index: -1;
+}
+
+/* Click Effect on Border */
+.roundImage:active:before {
+  border-color: rgba(255, 255, 255, 1); /* Change border color on click */
+  animation: borderPulse 0.6s ease-out; /* Pulsing effect on click */
+}
+
+/* Hover Effect on Border */
+.roundImage:hover:before {
+  border-color: rgba(255, 255, 255, 0.7); /* Change border color on hover */
+}
+
+/* Pulsing Animation for Click Effect */
+@keyframes borderPulse {
+  0% {
+    border-width: 5px;
+    border-color: rgba(255, 255, 255, 1);
+  }
+  50% {
+    border-width: 8px;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+  100% {
+    border-width: 5px;
+    border-color: rgba(255, 255, 255, 1);
+  }
+}
+
+
